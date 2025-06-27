@@ -1,5 +1,5 @@
 using System;
-using Core.Enteties;
+using Core.Entities;
 using Infrastructure.Config;
 using Microsoft.EntityFrameworkCore;
 
