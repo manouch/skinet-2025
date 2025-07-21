@@ -20,3 +20,7 @@
 //   background: var(--mat-sys-surface);
 //   color: var(--mat-sys-on-surface);
 // }
+
+.mdc-notched-outline__notch {
+  border-right-style: none !important;
+}
