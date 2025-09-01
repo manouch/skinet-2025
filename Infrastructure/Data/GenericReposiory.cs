@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data;
 
-public class GenericReposiory<T>(StoreContext context) : IGenericRepository<T> where T : BaseEntity
+public class GenericRepository<T>(StoreContext context) : IGenericRepository<T> where T : BaseEntity
 {
   public void Add(T entity)
   {
@@ -59,11 +59,6 @@ public class GenericReposiory<T>(StoreContext context) : IGenericRepository<T> w
   public void Remove(T entity)
   {
     context.Set<T>().Remove(entity);
-  }
-
-  public async Task<bool> SaveAllAsync()
-  {
-    return await context.SaveChangesAsync() > 0;
   }
 
   public void Update(T entity)
